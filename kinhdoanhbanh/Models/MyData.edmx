@@ -12,17 +12,6 @@
           <Property Name="Key" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="Value" Type="nvarchar" MaxLength="250" />
         </EntityType>
-        <EntityType Name="ChiTietHoaDon">
-          <Key>
-            <PropertyRef Name="MaHD" />
-            <PropertyRef Name="MaSP" />
-          </Key>
-          <Property Name="MaHD" Type="int" Nullable="false" />
-          <Property Name="MaSP" Type="int" Nullable="false" />
-          <Property Name="SoLuong" Type="float" />
-          <Property Name="DonGiaBan" Type="float" />
-          <Property Name="ThanhTien" Type="float" />
-        </EntityType>
         <EntityType Name="Contact">
           <Key>
             <PropertyRef Name="id" />
@@ -34,12 +23,23 @@
           <Property Name="NoiDung" Type="nvarchar(max)" />
           <Property Name="NgayGui" Type="datetime" />
         </EntityType>
+        <EntityType Name="ChiTietHoaDon">
+          <Key>
+            <PropertyRef Name="MaHD" />
+            <PropertyRef Name="MaSP" />
+          </Key>
+          <Property Name="MaHD" Type="int" Nullable="false" />
+          <Property Name="MaSP" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="float" />
+          <Property Name="DonGiaBan" Type="float" />
+          <Property Name="ThanhTien" Type="float" />
+        </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="MaHD" />
           </Key>
           <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NgayXuatHD" Type="datetime" />
+          <Property Name="NgayXuatHD" Type="date" />
           <Property Name="HinhThucThanhToan" Type="nvarchar" MaxLength="50" />
           <Property Name="TongTien" Type="float" />
           <Property Name="MaKH" Type="int" />
@@ -160,8 +160,8 @@
         </Association>
         <EntityContainer Name="Quan_Ly_Tiem_BanhModelStoreContainer">
           <EntitySet Name="CauHinh" EntityType="Self.CauHinh" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Loai" EntityType="Self.Loai" Schema="dbo" store:Type="Tables" />
@@ -215,7 +215,7 @@
             <PropertyRef Name="MaHD" />
           </Key>
           <Property Name="MaHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NgayXuatHD" Type="DateTime" Precision="3" />
+          <Property Name="NgayXuatHD" Type="DateTime" Precision="0" />
           <Property Name="HinhThucThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TongTien" Type="Double" />
           <Property Name="MaKH" Type="Int32" />
@@ -326,7 +326,7 @@
             <End Role="SanPham" EntitySet="SanPhams" />
             <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="Loai">
           <Key>
             <PropertyRef Name="MaLoai" />
@@ -385,7 +385,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

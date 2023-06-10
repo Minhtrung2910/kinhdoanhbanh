@@ -217,8 +217,8 @@ namespace kinhdoanhbanh.Controllers
             string requestId = DateTime.Now.Ticks.ToString();
             string extraData = "";
 
-           
-          
+
+
             //Before sign HMAC SHA256 signature
             string rawHash = "partnerCode=" +
                 partnerCode + "&accessKey=" +

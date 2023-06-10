@@ -62,7 +62,7 @@ namespace kinhdoanhbanh.Areas.Admin.Controllers
                         string extension = Path.GetExtension(HinhAnh.FileName);
                         filename = filename + "_" + long.Parse(DateTime.Now.ToString("yyyyMMddhhmmss")) + extension;
                         sp.HinhAnh = filename;
-                        HinhAnh.SaveAs(Path.Combine(Server.MapPath("../../Content/Images/"), filename));
+                        HinhAnh.SaveAs(Path.Combine(Server.MapPath("../../Images/"), filename));
                     }
 
                     sp.TenSP = tenSP;
@@ -87,7 +87,7 @@ namespace kinhdoanhbanh.Areas.Admin.Controllers
                     var sp = db.SanPhams.FirstOrDefault(x => x.MaSP == _maSpParse);
 
                     //Lấy ra ảnh cũ
-                    var PathAnhCu = (Server.MapPath("../../Content/Images/") + sp.HinhAnh);
+                    var PathAnhCu = (Server.MapPath("../../Images/") + sp.HinhAnh);
                     FileInfo FileAnhCu = new FileInfo(PathAnhCu.ToString());
 
                     if (HinhAnh != null && HinhAnh.ContentLength > 0)
@@ -104,7 +104,7 @@ namespace kinhdoanhbanh.Areas.Admin.Controllers
                         string extension = Path.GetExtension(HinhAnh.FileName);
                         filename = filename + "_" + long.Parse(DateTime.Now.ToString("yyyyMMddhhmmss")) + extension;
                         sp.HinhAnh = filename;
-                        HinhAnh.SaveAs(Path.Combine(Server.MapPath("../../Content/Images/"), filename));
+                        HinhAnh.SaveAs(Path.Combine(Server.MapPath("../../Images/"), filename));
                     }
 
                     sp.TenSP = tenSP;
@@ -231,7 +231,7 @@ namespace kinhdoanhbanh.Areas.Admin.Controllers
                 sp.DonGiaBan = sanPham.DonGiaBan;
 
                 //Lấy ra ảnh cũ
-                var PathAnhCu = (Server.MapPath("../../../Content/Images/") + sp.HinhAnh);
+                var PathAnhCu = (Server.MapPath("../../../Images/") + sp.HinhAnh);
                 FileInfo FileAnhCu = new FileInfo(PathAnhCu.ToString());
 
                 if (HinhAnh != null && HinhAnh.ContentLength > 0)

@@ -199,6 +199,7 @@
   <ItemGroup>
     <Content Include="Areas\Admin\Content\css\sb-admin-2.css" />
     <Content Include="Areas\Admin\Content\css\sb-admin-2.min.css" />
+    <Content Include="Areas\Admin\Content\img\R.jpg" />
     <Content Include="Areas\Admin\Content\img\undraw_posting_photo.svg" />
     <Content Include="Areas\Admin\Content\img\undraw_profile.svg" />
     <Content Include="Areas\Admin\Content\img\undraw_profile_1.svg" />
@@ -1931,14 +1932,13 @@
     <Content Include="Content\_Layout\assets\img\latest-news\news-bg-5.jpg" />
     <Content Include="Content\_Layout\assets\img\latest-news\news-bg-6.jpg" />
     <Content Include="Content\_Layout\assets\img\logo.png" />
-    <Content Include="Content\_Layout\assets\img\pexels-maria-orlova-4946440.png" />
-    <Content Include="Content\_Layout\assets\img\pexels-toa-heftiba-şinca-1194431.png" />
     <Content Include="Content\_Layout\assets\img\products\product-img-1.jpg" />
     <Content Include="Content\_Layout\assets\img\products\product-img-2.jpg" />
     <Content Include="Content\_Layout\assets\img\products\product-img-3.jpg" />
     <Content Include="Content\_Layout\assets\img\products\product-img-4.jpg" />
     <Content Include="Content\_Layout\assets\img\products\product-img-5.jpg" />
     <Content Include="Content\_Layout\assets\img\products\product-img-6.jpg" />
+    <Content Include="Content\_Layout\assets\img\R.png" />
     <Content Include="Content\_Layout\assets\img\team\team-1.jpg" />
     <Content Include="Content\_Layout\assets\img\team\team-2.jpg" />
     <Content Include="Content\_Layout\assets\img\team\team-3.jpg" />
@@ -2217,6 +2217,8 @@
     <Content Include="Content\_Layout\assets\webfonts\fa-solid-900.ttf" />
     <Content Include="Content\_Layout\assets\webfonts\fa-solid-900.woff" />
     <Content Include="Content\_Layout\assets\webfonts\fa-solid-900.woff2" />
+    <None Include="Properties\PublishProfiles\longson - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\longson - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

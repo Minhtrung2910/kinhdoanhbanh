@@ -18,7 +18,7 @@
         <EntityTypeShape EntityType="Quan_Ly_Tiem_BanhModel.ChiTietHoaDon" Width="1.5" PointX="7.25" PointY="6.375" />
         <AssociationConnector Association="Quan_Ly_Tiem_BanhModel.FK_ChiTietHoaDon_HoaDon" />
         <AssociationConnector Association="Quan_Ly_Tiem_BanhModel.FK_ChiTietHoaDon_SanPham" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>
